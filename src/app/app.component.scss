@@ -1,0 +1,21 @@
+.general-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+
+    &-navigation {
+        overflow-y: auto;
+        position: fixed;
+        height: 100%;
+
+        &::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+    }
+
+
+    &-router {
+        width: 100%;
+    }
+}

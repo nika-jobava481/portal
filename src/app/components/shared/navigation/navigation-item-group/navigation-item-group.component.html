@@ -1,0 +1,18 @@
+<div class="nav-group" [ngClass]="{ 'open': open && isGroup }">
+    <ng-container *ngIf="isGroup">
+        <div (click)="toggleList()" class="nav-group-name">
+            <p>{{routes.name}}</p>
+            <div class="arrow" [ngStyle]="{ transform: open ? 'rotate(180deg)' : 'rotate(0deg)' }">
+                <img src="../../../../../assets/images/svg/elements/arrow-head.svg" alt="arrow...">
+            </div>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="open">
+        <div class="nav-group-list">
+            <ng-container *ngFor="let item of routes.children">
+                <app-navigation-item [item]="item"></app-navigation-item>
+            </ng-container>
+        </div>
+    </ng-container>
+    <!-- <hr> -->
+</div>

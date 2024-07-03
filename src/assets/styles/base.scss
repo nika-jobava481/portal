@@ -1,0 +1,17 @@
+$main-theme-color: #9f226d;
+
+
+$main-bg-color: #f4f8fd;
+$secondary-bg-color: #fff;
+
+.navigation-list{
+    border-right: 2px solid $main-theme-color;
+    background-color: $secondary-bg-color;
+}
+
+.nav-group{
+    background-color: $secondary-bg-color;
+    &.open{
+        background-color: $main-bg-color;
+    }
+}
